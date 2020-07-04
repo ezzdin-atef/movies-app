@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import NavBar from "./navBar";
 import http from "../services/httpService";
+import getKey from "../config";
 
 class SearchBanar extends Component {
   state = {
@@ -9,8 +10,7 @@ class SearchBanar extends Component {
 
   async componentDidMount() {
     const { data } = await http.get(
-      "https://api.themoviedb.org/3/trending/all/day?api_key=" +
-        process.env.REACT_APP_API_KEY
+      "https://api.themoviedb.org/3/trending/all/day?api_key=" + getKey()
     );
     const rand = Math.round(Math.random() * 20);
     let img =

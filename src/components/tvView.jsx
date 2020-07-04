@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import HomeBtn from "./common/homeBtn";
 import http from "../services/httpService";
+import getKey from "../config";
 
 class TvView extends Component {
   state = {
@@ -14,13 +15,13 @@ class TvView extends Component {
       "https://api.themoviedb.org/3/tv/" +
         this.state.id +
         "?api_key=" +
-        process.env.REACT_APP_API_KEY
+        getKey()
     );
     const { data: similar } = await http.get(
       "https://api.themoviedb.org/3/tv/" +
         this.state.id +
         "/similar?api_key=" +
-        process.env.REACT_APP_API_KEY +
+        getKey() +
         "&language=en-US"
     );
     this.setState({ data, similar });

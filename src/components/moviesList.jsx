@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import SearchBanar from "./searchBanar";
 import http from "../services/httpService";
 import ListOfMovies from "./listOfMovies";
+import getKey from "../config";
 
 class MoviesList extends Component {
   state = {
@@ -13,7 +14,7 @@ class MoviesList extends Component {
   fetchData = async () => {
     const { data } = await http.get(
       "https://api.themoviedb.org/3/movie/popular?api_key=" +
-        process.env.REACT_APP_API_KEY +
+        getKey() +
         "&language=en-US&page=" +
         this.state.current_page
     );
@@ -37,7 +38,7 @@ class MoviesList extends Component {
   handlePageChange = async (page) => {
     const { data } = await http.get(
       "https://api.themoviedb.org/3/movie/popular?api_key=" +
-        process.env.REACT_APP_API_KEY +
+        getKey() +
         "&language=en-US&page=" +
         page
     );
@@ -48,7 +49,7 @@ class MoviesList extends Component {
     if (query) {
       const { data } = await http.get(
         "https://api.themoviedb.org/3/search/movie?api_key=" +
-          process.env.REACT_APP_API_KEY +
+          getKey() +
           "&language=en-US&query=" +
           query +
           "&page=" +
