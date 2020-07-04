@@ -1,2 +1,3 @@
-# movie-app
-Movie App made in React.js
+# Movies App
+
+Movies App made in React.js
