@@ -53,7 +53,7 @@ class MoviesList extends Component {
           "&language=en-US&query=" +
           query +
           "&page=" +
-          this.state.current_page +
+          "1" +
           "&include_adult=false"
       );
       this.setState({ movies: data.results, total: 20 });
