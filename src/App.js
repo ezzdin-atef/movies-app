@@ -14,8 +14,8 @@ function App() {
         <Route path="/tv/:id" component={TvView} />
         <Route path="/movies/pages/:id" component={MoviesList} />
         <Route path="/series/pages/:id" component={SeriesList} />
-        <Redirect from="/movies" to="/movies/pages/1" />
-        <Redirect from="/series" to="/series/pages/1" />
+        <Redirect from="/movies" exact to="/movies/pages/1" />
+        <Redirect from="/series" exact to="/series/pages/1" />
         <Redirect from="/" to="/movies" />
       </Switch>
     </div>
