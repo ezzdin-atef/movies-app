@@ -1,0 +1,212 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.bannar {
+  background: rgb(240, 152, 25);
+  background: linear-gradient(
+    90deg,
+    rgba(240, 152, 25, 1) 0%,
+    rgba(237, 222, 93, 1) 100%
+  );
+  color: #fff;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.bannar .overlay {
+  height: 400px;
+}
+/* .bannar .blur {
+  backdrop-filter: blur(20px);
+} */
+.bannar h1 {
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 80px;
+  position: relative;
+}
+.bannar input {
+  position: relative;
+  border: 1px solid var(--secondary);
+  border-radius: 3px;
+}
+.bannar input:focus {
+  outline: none;
+  box-shadow: none;
+  border: 1px solid var(--dark);
+}
+.nav {
+  position: absolute;
+  top: 20px;
+  width: 100%;
+  display: block;
+  text-align: center;
+}
+.nav ul {
+  list-style: none;
+}
+.nav ul li a {
+  color: #fff;
+  margin: 10px 20px;
+  font-size: 20px;
+}
+.nav ul li a.active {
+  text-decoration: underline;
+}
+.nav ul li a:hover {
+  color: #fff;
+}
+
+.movie-box {
+  background-color: #fff;
+  margin: 20px 0;
+  padding: 15px;
+}
+.movie-box a,
+.movie-box a:hover {
+  text-decoration: none;
+  color: #333;
+}
+.movie-box > div {
+  position: relative;
+}
+.movie-box a:hover .overlay {
+  opacity: 0;
+}
+.vote {
+  position: absolute;
+  top: 15px;
+  z-index: 2;
+  right: 15px;
+  background: #ffeb3b;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  font-weight: bold;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0000006e;
+  transition: 0.5s ease-in-out;
+}
+.blur {
+  backdrop-filter: blur(50px);
+}
+.vote i {
+  display: block;
+}
+.movie-box h3 {
+  padding-top: 10px;
+}
+.movie-box img {
+  width: 100%;
+  border-radius: 3px;
+}
+.movie-view {
+  color: #fff;
+}
+.movie-view .container,
+.movie-view .container .row,
+.movie-view .container .row .left {
+  height: 100vh;
+}
+.movie-view .left {
+  line-height: 100vh;
+}
+.movie-view .right {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.movie-view h1 {
+  font-size: 70px;
+}
+.movie-view .right > div {
+  margin: 3px 0;
+}
+
+.movie-view .genres {
+  font-size: 18px;
+}
+.movie-view .genres ul {
+  list-style: none;
+  display: inline-flex;
+  padding: 0;
+  margin: 0;
+}
+.movie-view .genres ul li {
+  margin: 0 10px;
+}
+.movie-view .release,
+.movie-view .release code {
+  font-size: 18px;
+}
+.movie-view .release code,
+.movie-view .genres ul li,
+.movie-view .status span {
+  color: var(--warning);
+}
+.movie-view .rate i {
+  color: var(--yellow);
+}
+.similar {
+  font-size: 18px;
+}
+.similar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.similar ul li a {
+  color: #fff;
+  background-color: #343a403d;
+  transition: background-color 0.2s ease-in-out;
+}
+.similar ul li a:hover {
+  text-decoration: none;
+  background-color: #343a40a1;
+}
+.movie-view img {
+  width: 100%;
+  box-shadow: 0 0 20px 10px #0000003b;
+  border-radius: 3px;
+}
+
+.pagination {
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.pagination li a {
+  margin: 0 4px;
+  border-radius: 2px;
+}
+.home-btn {
+  position: absolute;
+  z-index: 3;
+  top: 15px;
+  left: 15px;
+  color: var(--danger);
+}
+.home-btn:hover {
+  color: var(--danger);
+}
